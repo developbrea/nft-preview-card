@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@556,210&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+:root{
+    
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-blue-car-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+--font: "Hanken Grotesk", serif;
+--font-2:"Outfit", sans-serif;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    font-family: var(--font-2);
+}
+
+main{
+    width: 375px;
+    height: 667px;
+    background-color: var(--Very-dark-blue-main-BG);
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.nft-cotainer{
+    width: 328px;
+    height: 544px;
+    background-color: var(--Very-dark-blue-car-BG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    font-family: var(--font-2);
+}
+
+.nft-content-img{
+    width: 279px;
+    height: 279px;
+    display: block;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: .1rem;
+}
+
+.nft-content-img::after{
+    content: url(images/icon-view.svg);
+    background: var(--Cyan);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s  ease;
+}
+
+.nft-content-img:hover::after{opacity: 0.5;}
+
+.nft-img{
+    width: 279px;
+    height: 279px;
+    display: block;
+}   
+
+.nft-title{
+    font-size: 1.37rem;
+    color: var(--White);
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.nft-title:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.nft-descritions{
+    font-size: 0.99rem;
+    color: var(--Soft-blue);
+    margin-top: .8rem;
+    line-height: 1.7rem;
+}
+
+.nft-numbers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     align-items: center;
+     column-gap: 6rem;
+     margin-top: 1rem;
+    }
+     
+   
+
+    hr{
+        width: 17rem;
+        margin-top: 0.8rem;
+        column-rule: var(--Soft-blue);
+    
+    }
+
+    .nft-ether{
+        color: var(--Cyan);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         align-items: center;
+         column-gap: .3rem;
+         font-size: .98rem;
+         font-weight: 600;
+        
+    }
+
+    .nft-clock{
+        color: var(--Soft-blue);
+        font-size: .98rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         align-items: center;
+         column-gap: .3rem;
+        
+    }
+
+    
+
+.nft-creations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nft-creations-spam{
+    color: var(  --Soft-blue);
+    margin-right: .2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.nft-creations-p{
+color: var(--White);
+margin-top: 1rem;
+font-size: .95rem;
+}
+
+.nft-creations-p:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.nft-creations-avatar{
+    width: 32px;
+    height: 32px;
+    margin-top: 1rem;
+    margin-right:1rem;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: double;
+    color: var(--White);
+   
+}
+
+.attribution{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+@media (min-width: 600px){
+ main{
+    width: 1440px;
+    height: 900px;
+ }   
+
+ .nft-cotainer{
+    width: 350px;
+    height: 599px;
+}
+
+.nft-content-img{
+    width: 303px;
+    height: 303px;
+    margin-top: -1rem;
+}
+
+.nft-img{
+    width: 303px;
+    height: 303px;
+    display: block;
+} 
+
+.nft-descritions{
+    font-size: 1.12rem;
+    color: var(--Soft-blue);
+    margin-top: .8rem;
+    line-height: 1.7rem;
+}
+
+
+    .nft-ether{
+         font-size: 1.05rem;
+       margin-top: 1rem;
+        
+    }
+.nft-numbers{
+     margin-top: .5rem;
+     column-gap: 6.8rem;
+    
+    }
+
+  .nft-clock{
+        margin-top: 1rem;
+        font-size: 1.05rem;
+    }
+    
+     .nft-creations-p{
+font-size: 1.05rem;
+}   
+
+.nft-title{
+    font-size: 1.37rem;
+   
+}
+
+
+.nft-creations{
+ 
+    margin-top: .6rem;
+}
+
+
+    hr{
+        width: 19rem;
+        margin-top: 1rem;
+       
+    
+    }
+}
